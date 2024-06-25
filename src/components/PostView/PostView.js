@@ -3,15 +3,26 @@ import styles from "./postView.module.css";
 
 import Title from "../Title/Title";
 import { StructuredText, Image, VideoPlayer } from "react-datocms";
+import Link from "next/link";
 
 function PostView({ article }) {
+  console.log(article);
+  const { categories } = article;
   return (
     <div>
+      <div>
+        <span style={{ fontWeight: "bold" }}>in: </span>
+        {categories.map((category, index) => (
+          <Link key={index} href={category.slug} className={styles.link}>
+            {category.name}
+            {index < categories.length - 1 && ", "}
+          </Link>
+        ))}
+      </div>
       <Title>{article.title}</Title>
       <StructuredText
         data={article.content}
         renderBlock={({ record }) => {
-          console.log(record);
           switch (record.__typename) {
             case "ImageRecord":
               return <Image data={record.image.responsiveImage} />;

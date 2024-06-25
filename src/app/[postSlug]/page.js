@@ -6,8 +6,9 @@ const PAGE_CONTENT_QUERY = `query MyQuery($slug :String)  {
     author {
       name
     }
-    category {
-      category
+    categories {
+      name
+      slug
     }
     coverImage {
       responsiveImage {

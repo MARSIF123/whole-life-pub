@@ -1,0 +1,8 @@
+.link {
+  color: var(--secondary-link-color);
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+}

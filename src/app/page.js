@@ -31,17 +31,15 @@ export default async function Home() {
 
   console.log({ allArticles });
   return (
-    <main className={styles.main}>
-      <div className={styles.postGrid}>
-        {allArticles.map((article) => (
-          <PostSummaryCard
-            key={article.id}
-            slug={article.slug}
-            title={article.title}
-            coverImage={article.coverImage.responsiveImage}
-          />
-        ))}
-      </div>
-    </main>
+    <div className={styles.postGrid}>
+      {allArticles.map((article) => (
+        <PostSummaryCard
+          key={article.id}
+          slug={article.slug}
+          title={article.title}
+          coverImage={article.coverImage.responsiveImage}
+        />
+      ))}
+    </div>
   );
 }

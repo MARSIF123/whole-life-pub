@@ -1,9 +1,9 @@
 :root {
-  --primary-background-color: #F8F7F0;
+  --primary-background-color: #f8f7f0;
   --primary-header-color: #fff;
-  --primary-link-color: #87240F;
-  --secondary-link-color : #CF4F00;
-  --third-link-color: #E66108;
+  --primary-link-color: #87240f;
+  --secondary-link-color: #cf4f00;
+  --third-link-color: #e66108;
 }
 
 * {
@@ -24,4 +24,11 @@ body {
   font-size: 1.5rem;
   background-color: var(--primary-background-color);
   padding-top: 20vh;
+}
+.main {
+  width: 90%;
+  margin: auto;
+}
+a {
+  text-decoration: none;
 }
