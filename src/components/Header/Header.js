@@ -9,10 +9,12 @@ function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.logoImage}>
-        <Image src={image} className={styles.img} alt='logo-wholelifepub'  priority={true}/>
+        <Image src={image} className={styles.img} alt='logo-wholelifepub' priority={true} />
       </div>
-      <Navbar />
-      <Search />
+      <div className={styles.nav}>
+        <Navbar />
+        <Search />
+      </div>
     </div>
   )
 }

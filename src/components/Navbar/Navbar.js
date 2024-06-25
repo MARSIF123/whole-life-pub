@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './navbar.module.css'
 import Link from 'next/link'
 import ArrowDown from '../Icons/ArrowDown'
+import ShuffleIcon from '../Icons/ShuffleIcon'
 
 function Navbar() {
     return (
@@ -42,7 +43,7 @@ function Navbar() {
             </li>
             <li className={styles.navLi}><Link className={styles.link} href={'/podcost'} >PODCOST</Link></li>
             <li className={styles.navLi}><Link className={styles.link} href={'/collections/books'} >BOOKS</Link></li>
-            <li className={styles.navLi}><Link className={styles.link} href={'/random'}>RANDOM</Link></li>
+            <li className={styles.navLi}><Link className={styles.link} href={'/random'}>RANDOM<ShuffleIcon /></Link></li>
         </ul>
     )
 }
