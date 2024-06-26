@@ -47,7 +47,6 @@
 }
 
 .link {
-    text-decoration: none;
     color: var(--primary-link-color);
     border-bottom: 1px solid var(--primary-link-color);
 
