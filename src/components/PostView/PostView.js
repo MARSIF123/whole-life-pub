@@ -7,17 +7,24 @@ import Link from "next/link";
 
 function PostView({ article }) {
   console.log(article);
-  const { categories } = article;
+  const { tags } = article;
   return (
     <div>
       <div>
         <span style={{ fontWeight: "bold" }}>in: </span>
-        {categories.map((category, index) => (
-          <Link key={index} href={category.slug} className={styles.link}>
-            {category.name}
-            {index < categories.length - 1 && ", "}
-          </Link>
-        ))}
+        {tags?.map((tag, index) => {
+          const href = tag.parentCategory
+            ? `/${tag.parentCategory?.slug}/${tag.slug}`
+            : `/${tag.slug}`;
+          return (
+            <>
+              <Link key={index} href={href} className={styles.link}>
+                {tag.slug}
+                {index < tags.length - 1 && ", "}
+              </Link>
+            </>
+          );
+        })}
       </div>
       <Title>{article.title}</Title>
       <StructuredText

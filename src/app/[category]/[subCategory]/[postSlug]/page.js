@@ -8,9 +8,16 @@ const PAGE_CONTENT_QUERY = gql`
       author {
         name
       }
-      categories {
-        name
-        slug
+      tags {
+        ... on CategoryRecord {
+          slug
+          parentCategory {
+            slug
+          }
+        }
+        ... on ParentCategoryRecord {
+          slug
+        }
       }
       coverImage {
         responsiveImage {
