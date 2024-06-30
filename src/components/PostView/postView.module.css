@@ -6,3 +6,27 @@
   line-height: 1.14;
   letter-spacing: normal;
 }
+
+.date {
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  color: #2c2823;
+  margin: 9px 0 13px;
+  display: block;
+}
+.contentContainer {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 350px) {
+  .contentContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}

@@ -1,0 +1,54 @@
+.sidebar {
+  width: 25%;
+  height: 100px;
+  color: #fff;
+  position: sticky;
+  margin-top: 100px;
+  margin-right: 10px;
+  top: 20%;
+}
+.shareBtn {
+  width: 100%;
+  border: 1px solid var(--gray-color);
+  height: 45px;
+}
+.getPocketBtn,
+.getFBBtn,
+.getPinBtn,
+.getTwitterbtn {
+  width: 100%;
+  height: 100%;
+  color: var(--gray-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.getPocketBtn:hover {
+  background-color: red;
+  color: white;
+}
+.getFBBtn:hover {
+  background-color: #1877f2;
+  color: white;
+}
+.getPinBtn:hover {
+  background-color: #e60023;
+  color: white;
+}
+.getTwitterbtn:hover {
+  background-color: #1da1f2;
+  color: white;
+}
+
+@media (max-width: 350px) {
+  .sidebar {
+    display: flex;
+    position: static;
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+  }
+  .shareBtn {
+    width: 45px;
+  }
+}

@@ -1,0 +1,26 @@
+.ImageContainer {
+  width: 90%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.image {
+  width: 100%;
+}
+
+.paragraph {
+  margin-bottom: 5px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.list {
+  margin-left: 15px;
+}
+.quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  font-weight: bold;
+}

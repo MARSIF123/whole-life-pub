@@ -1,15 +1,19 @@
 import React from "react";
 import styles from "./postView.module.css";
 
-import Title from "../Title/Title";
-import { StructuredText, Image, VideoPlayer } from "react-datocms";
+import Heading from "../Heading/Heading";
+
 import Link from "next/link";
+import ShareBtnSelect from "../ShareBtnSelect/ShareBtnSelect";
+import { formatDate } from "@/utils/helpers";
+import CustomeStructuredText from "../CustomStructuredText/CustomeStructuredText";
 
 function PostView({ article }) {
   console.log(article);
-  const { tags } = article;
+  const { tags, author, title, publishedDate, content } = article;
   return (
     <div>
+      {/* TAGS */}
       <div>
         <span style={{ fontWeight: "bold" }}>in: </span>
         {tags?.map((tag, index) => {
@@ -26,30 +30,26 @@ function PostView({ article }) {
           );
         })}
       </div>
-      <Title>{article.title}</Title>
-      <StructuredText
-        data={article.content}
-        renderBlock={({ record }) => {
-          switch (record.__typename) {
-            case "ImageRecord":
-              return <Image data={record.image.responsiveImage} />;
-            case "VideoRecord": {
-              console.log(record.video);
-              return (
-                <VideoPlayer
-                  autoPlay={false} // Adjust based on your requirements
-                  controls
-                  style={{ width: `${500}px` }} // Adjust width as per your requirement
-                  loop={false} // Adjust based on your requirements
-                  data={record.video.video}
-                />
-              );
-            }
-            default:
-              return null;
-          }
-        }}
-      />
+
+      {/* AUTHOR NAME AND DATE */}
+      <span className={styles.date}>
+        {author?.name} • {formatDate(publishedDate)}
+      </span>
+
+      {/* TITLE */}
+      <Heading HeadingTag="h1">{title}</Heading>
+
+      {/* CONTENT */}
+      <div className={styles.contentContainer}>
+        {/* SHARE POST BUTTONS */}
+        <ShareBtnSelect />
+
+        {/* ACTUAL CONTENT */}
+        <div className={styles.content}>
+          {" "}
+          <CustomeStructuredText content={content} />
+        </div>
+      </div>
     </div>
   );
 }

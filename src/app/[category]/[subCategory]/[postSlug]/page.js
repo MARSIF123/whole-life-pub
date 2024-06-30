@@ -1,7 +1,10 @@
 import React from "react";
 import { performRequest } from "@/lib/datocms";
 import PostView from "@/components/PostView/PostView";
+import RelatedPosts from "@/components/RelatedPosts/RelatedPosts";
 import { gql } from "graphql-request";
+
+export const revalidate = 0;
 const PAGE_CONTENT_QUERY = gql`
   query MyQuery($slug: String) {
     article(filter: { slug: { eq: $slug } }) {
@@ -19,18 +22,52 @@ const PAGE_CONTENT_QUERY = gql`
           slug
         }
       }
+
       coverImage {
-        responsiveImage {
+        responsiveImage(locale: en, sizes: "") {
           alt
+          aspectRatio
           base64
           bgColor
+          height
+          sizes
+          src
+          srcSet
           title
+          webpSrcSet
+          width
         }
       }
       publishedDate
       slug
       title
       id
+      relatedPosts {
+        id
+        title
+        slug
+        categories {
+          slug
+          parentCategory {
+            slug
+          }
+        }
+        coverImage {
+          responsiveImage {
+            alt
+            aspectRatio
+            base64
+            bgColor
+            height
+            sizes
+            src
+            srcSet
+            title
+            webpSrcSet
+            width
+          }
+        }
+      }
       content {
         value
         blocks {
@@ -80,12 +117,18 @@ export default async function page({ params }) {
     query: PAGE_CONTENT_QUERY,
     variables: { slug: params.postSlug },
   });
+  const { relatedPosts } = data?.article;
 
   if (!data || !data.article) {
     return <div>{`Article not found :(`}</div>;
   }
 
-  return <PostView article={data.article} />;
+  return (
+    <>
+      <PostView article={data.article} />
+      <RelatedPosts data={relatedPosts} />
+    </>
+  );
 }
 
 export async function generateMetadata({ params }, parent) {

@@ -4,6 +4,7 @@
   --primary-link-color: #87240f;
   --secondary-link-color: #cf4f00;
   --third-link-color: #e66108;
+  --gray-color: #666;
 }
 
 * {
@@ -21,7 +22,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   background-color: var(--primary-background-color);
   padding-top: 20vh;
 }
