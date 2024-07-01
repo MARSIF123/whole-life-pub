@@ -9,10 +9,9 @@ import { formatDate } from "@/utils/helpers";
 import CustomeStructuredText from "../CustomStructuredText/CustomeStructuredText";
 
 function PostView({ article }) {
-  console.log(article);
   const { tags, author, title, publishedDate, content } = article;
   return (
-    <div>
+    <div style={{ marginBottom: "100px" }}>
       {/* TAGS */}
       <div>
         <span style={{ fontWeight: "bold" }}>in: </span>

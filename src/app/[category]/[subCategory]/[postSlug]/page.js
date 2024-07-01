@@ -3,6 +3,7 @@ import { performRequest } from "@/lib/datocms";
 import PostView from "@/components/PostView/PostView";
 import RelatedPosts from "@/components/RelatedPosts/RelatedPosts";
 import { gql } from "graphql-request";
+import Seperator from "@/components/Seperator/Seperator";
 
 export const revalidate = 0;
 const PAGE_CONTENT_QUERY = gql`
@@ -126,6 +127,7 @@ export default async function page({ params }) {
   return (
     <>
       <PostView article={data.article} />
+      <Seperator />
       <RelatedPosts data={relatedPosts} />
     </>
   );

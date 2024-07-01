@@ -6,7 +6,7 @@ import Link from "next/link";
 
 function RelatedPosts({ data }) {
   return (
-    <div>
+    <div className={styles.relatedPosts}>
       <Heading HeadingTag={"h4"}>Related Blog Posts</Heading>
       <div className={styles.gridContainer}>
         {data?.map((post) => {
