@@ -17,7 +17,7 @@ import {
 } from "datocms-structured-text-utils";
 import { render as toPlainText } from "datocms-structured-text-to-plain-text";
 
-function sCustomeStructuredText({ content }) {
+function CustomeStructuredText({ content }) {
   return (
     <StructuredText
       data={content}
