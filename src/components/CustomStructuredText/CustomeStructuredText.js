@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CustomStructuredText.module.css";
+import styles from "./customStructuredText.module.css";
 import Heading from "../Heading/Heading";
 import Link from "next/link";
 import {
@@ -17,7 +17,7 @@ import {
 } from "datocms-structured-text-utils";
 import { render as toPlainText } from "datocms-structured-text-to-plain-text";
 
-function CustomeStructuredText({ content }) {
+function sCustomeStructuredText({ content }) {
   return (
     <StructuredText
       data={content}
