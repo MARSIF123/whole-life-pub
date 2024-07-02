@@ -6,7 +6,7 @@ function ShareBtnSelect() {
   return (
     <div className={styles.sidebar}>
       <div key={"getPocketLink"} className={styles.shareBtn}>
-        <Link href={"www.google.com"} className={styles.getPocketBtn}>
+        <Link href={"/www.google.com"} className={styles.getPocketBtn}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -22,7 +22,7 @@ function ShareBtnSelect() {
         </Link>
       </div>
       <div key={"fbLink"} className={styles.shareBtn}>
-        <Link href={"www.google.com"} className={styles.getFBBtn}>
+        <Link href={"/www.google.com"} className={styles.getFBBtn}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -39,7 +39,7 @@ function ShareBtnSelect() {
         </Link>
       </div>
       <div key={"pinterestLink"} className={styles.shareBtn}>
-        <Link href={"www.google.com"} className={styles.getPinBtn}>
+        <Link href={"/www.google.com"} className={styles.getPinBtn}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -55,7 +55,7 @@ function ShareBtnSelect() {
         </Link>
       </div>
       <div key={"twitterLink"} className={styles.shareBtn}>
-        <Link href={"www.google.com"} className={styles.getTwitterbtn}>
+        <Link href={"/www.google.com"} className={styles.getTwitterbtn}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"

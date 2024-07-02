@@ -1,0 +1,16 @@
+.heading {
+  opacity: 0.2;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.75;
+  text-transform: uppercase;
+  color: #cf4f00;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  margin-left: 13px;
+  font-size: 4.8rem;
+  text-align: left;
+  letter-spacing: -5px;
+}
