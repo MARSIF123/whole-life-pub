@@ -14,7 +14,7 @@ function PostSummaryCard({ data }) {
         href={`${categorySlug}/${subCategorySlug}/${slug}`}
         className={styles.imageContainer}
       >
-        <Image data={coverImage} className={styles.image} />
+        <Image data={coverImage} className={styles.image} alt={"djfdh"} />
       </Link>
       <Link href={`/${slug}`} className={styles.titleContainer}>
         {title}

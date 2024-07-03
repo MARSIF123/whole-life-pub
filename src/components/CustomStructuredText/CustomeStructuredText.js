@@ -24,7 +24,7 @@ function CustomeStructuredText({ content }) {
       renderBlock={({ record }) => {
         switch (record.__typename) {
           case "ImageRecord":
-            return <Image data={record.image.responsiveImage} />;
+            return <Image data={record.image.responsiveImage} alt={"djfjh"} />;
           case "VideoRecord": {
             console.log(record.video);
             return (
