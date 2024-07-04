@@ -1,57 +1,63 @@
 .searchForm {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .flex {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin: 0 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 5px;
 }
-.searchInput{
-    font-size: 16px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: .88;
-    letter-spacing: .5px;
-    color: #2c2823;
-    border: 0;
-    padding: 10px 0 4px;
-    border-bottom: 1px solid #87240f;
-    cursor: pointer;
-    width: 100%;
-    margin-right: 3px;
-    z-index: 9989;
-    border-radius: 0;
+.searchInput {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.88;
+  letter-spacing: 0.5px;
+  color: #2c2823;
+  border: 0;
+  padding: 10px 0 4px;
+  border-bottom: 1px solid #87240f;
+  cursor: pointer;
+  width: 100%;
+  margin-right: 3px;
+  z-index: 9989;
+  border-radius: 0;
   outline: none;
 }
 
 .seacrhText {
-    color: var(--primary-link-color);
-    cursor: pointer;
+  color: var(--primary-link-color);
+  cursor: pointer;
 }
 
 .seacrhText:hover {
-    font-style: italic;
+  font-style: italic;
 }
 
 .searchBtn {
-    width: 36px;
-    height: 36px;
-    border: none;
-    background-color: inherit;
-    cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
 }
 
 .submitBtn {
-    background-color: var(--secondary-link-color);
-    opacity: .5;
-    border-radius: 3px;
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-    border: none;
-    padding: 3px;
+  background-color: var(--secondary-link-color);
+  opacity: 0.5;
+  border-radius: 3px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border: none;
+  padding: 3px;
 }
+/* @media (max-width: 1000px) {
+  .searchForm {
+    justify-content: space-between;
+    width: 100%;
+  }
+} */

@@ -5,26 +5,31 @@ import Search from "../Search/Search";
 import Link from "next/link";
 import ArrowDown from "../Icons/ArrowDown";
 import ArrowUp from "../Icons/ArrowUp";
+import MenuIcon from "../Icons/MenuIcon";
+import CrossIcon from "../Icons/CrossIcon";
 function MobileNavbar() {
   const [showMenu, setShowMenu] = React.useState(false);
   return (
     <div>
       {!showMenu ? (
         <button
+          className={styles.menuBtn}
           onClick={() => {
             setShowMenu(true);
           }}
         >
-          Show
+          <MenuIcon />
+          <span className={styles.menuText}>Menu</span>
         </button>
       ) : (
         <button
+          className={styles.menuBtn}
           onClick={() => {
             setShowMenu(false);
           }}
         >
           {" "}
-          Hide
+          <CrossIcon />
         </button>
       )}
       {showMenu && (

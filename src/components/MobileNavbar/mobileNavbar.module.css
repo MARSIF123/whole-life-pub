@@ -5,4 +5,76 @@
   right: 0;
   left: 0;
   background-color: var(--primary-header-color);
+  display: flex;
+  flex-direction: column;
+}
+.menuBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  color: var(--primary-link-color);
+}
+.menuText {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-left: 3px;
+}
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.navLi {
+  padding: 0px 8px;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.innerNav {
+  display: none;
+  flex-direction: column;
+}
+
+.arrowToggle {
+  color: var(--third-link-color);
+}
+
+.navLi:hover {
+  font-style: italic;
+
+  .arrowToggle {
+    color: var(--primary-link-color);
+  }
+
+  .innerNav {
+    display: flex;
+    align-items: start;
+    margin-top: 10px;
+  }
+}
+
+.link {
+  color: var(--primary-link-color);
+  border-bottom: 1px solid var(--primary-link-color);
+}
+
+.innerlink {
+  text-decoration: none;
+  color: black;
 }
